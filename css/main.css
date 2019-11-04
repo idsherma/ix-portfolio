@@ -1,0 +1,315 @@
+/* Ultra Light */
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/* Regular */
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/* Bold */
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  color: #0c0c0c;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%
+}
+
+.dark_mode {
+  background-color: #121212;
+}
+
+.dark_mode h2,
+.dark_mode h3, 
+.dark_mode p, 
+.dark_mode .container a, 
+.dark_mode .container span {
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%
+}
+
+h2 {
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  padding-bottom: 0.5rem
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.05rem
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-top: .5rem;
+  padding-bottom: .5rem
+}
+
+.ivory-is p {
+  font-size: 1.5rem
+}
+
+small {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: .5rem;
+  padding-bottom: .5rem
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: #0c0c0c;
+  padding-bottom: 0.25rem
+}
+
+label span {
+  display: inline-block;
+  padding-right: 0.5rem
+}
+
+a {
+  position: relative;
+  color: #808080;
+  text-decoration: none;
+  padding-bottom: 1px;
+  background-image: linear-gradient(transparent calc(100% - 1px), #808080 1px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: color 300ms, background-size 300ms
+}
+
+a:hover {
+  color: #808080;
+  background-image: linear-gradient(transparent calc(100% - 1px), #808080 1px);
+  background-size: 100% 100%
+}
+
+p span,
+a span {
+  display: block;
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  color: #0c0c0c
+}
+
+@media (min-width: 414px) {
+  p span,
+  a span {
+    display: inline-block;
+    padding-left: 0.025rem
+  }
+}
+
+.container {
+  display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem
+}
+
+.site-header a {
+  display: block;
+  color: #0c0c0c;
+  font-size: 1.25rem
+}
+
+.site-header a:last-child {
+  margin-top: 2px
+}
+
+.ivory-is {
+  padding-top: 2rem
+}
+
+.icons a {
+  font-size: 24px;
+}
+
+.icons a:hover {
+  color: red;
+  background-size: 0;
+}
+
+
+.work header .see-project {
+  font-family: "San Francisco", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem
+}
+
+.device-frame {
+  position: relative;
+  border: 6px solid #eee;
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow: hidden
+}
+
+.device-frame header {
+  background-color: #ccc;
+  padding: 5px 0 5px 2px;
+  position: relative;
+  display: flex
+}
+
+.device-frame header span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 3px
+}
+
+.device-frame_mobile {
+  width: 100%;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden
+}
+
+.learning-list {
+  padding-bottom: 5rem
+}
+
+.learning-list:last-child {
+  padding-bottom: 0
+}
+
+.dot {
+  display: block;
+  background-color: #808080;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%
+}
+
+.site-footer .dot {
+  margin: 0 auto
+}
+
+.site-nav .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.site-nav .container div:last-child {
+  text-align: right
+}
+
+.site-nav .container a {
+  font-size: 1rem
+}
+
+.site-nav .container a span {
+  display: block;
+  padding-bottom: 0.5rem
+}
+
+@media (min-width: 768px) {
+  .ivory-is p {
+    width: 60%
+  }
+  .editorial-work small {
+    width: 40%
+  }
+  .about p {
+    width: 60%
+  }
+  .project-header p {
+    width: 60%
+  }
+  .project-header p span {
+    width: 50%
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+  }
+  .flex-3 .device-frame_mobile {
+    width: calc(33.333% - 1rem);
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%
+  }
+  .flex-2 .device-frame_mobile {
+    width: calc(33.333% - 1rem);
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%
+  }
+}
