@@ -1,3 +1,7 @@
+/* Headers: font-family: 'Libre Baskerville', serif;  */
+/* Body copy: font-family: 'Source Sans Pro', sans-serif; */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +9,26 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif; 
   width: 100%;
   min-width: 320px;
   overflow-x: hidden;
-  font-weight: 400;
   font-size: 62.5%;
   color: #0c0c0c;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%
+}
+
+.dark_mode {
+  background-color: #121212;
+}
+
+.dark_mode h2,
+.dark_mode h3, 
+.dark_mode p, 
+.dark_mode .container a, 
+.dark_mode .container span {
+  color: white;
 }
 
 img {
@@ -23,57 +37,152 @@ img {
   max-width: 100%
 }
 
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* color: #007BFF; */
+@media only screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 42px;
+  }
+
+}
+
+span.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg) }
+   10% { transform: rotate(-10.0deg) }
+   20% { transform: rotate( 12.0deg) }
+   30% { transform: rotate(-10.0deg) }
+   40% { transform: rotate(  9.0deg) }
+   50% { transform: rotate(  0.0deg) }
+  100% { transform: rotate(  0.0deg) }
+}
+
+
+
+h2, h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 34px;
+}
+
+
+h4,
+h5,
+h6 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.05rem
+}
+
 p {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
   padding-top: .5rem;
   padding-bottom: .5rem
 }
 
-section {
-  min-height: 400px;
-  padding: 6% 0;
-  background-color: #d3d3d3;
-}
-
-footer {
-  padding: 1% 0;
-  background-color: #a8a8a8;
-}
-
-.content-border {
-  background: black;
-  height: 75px;
-}
-
-.content-border p {
-  color: white;
-}
-
-section:nth-child(even) {
-  background-color: #7e7e7e;
-}
-
-header {
-  padding: 5% 0;
+.ivory-is h2 {
+  font-size: 1.4rem;
 }
 
 .ivory-is p {
-  font-size: 1.5rem
+  font-size: 1.4rem;
 }
-p {
-  text-align: center;
+
+.ivory-is__name {
+  color: #007BFF;
+  font-weight: 700;
+}
+
+small {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: .5rem;
+  padding-bottom: .5rem
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: #0c0c0c;
+  padding-bottom: 0.25rem
+}
+
+label span {
+  display: inline-block;
+  padding-right: 0.5rem
+}
+
+a {
+  position: relative;
+  color: #007BFF;
+  text-decoration: none;
+  padding-bottom: 1px;
+  background-image: linear-gradient(transparent calc(100% - 1px),#007BFF 1px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: color 300ms, background-size 300ms
+}
+
+a:hover {
+  color: #007BFF;
+  background-image: linear-gradient(transparent calc(100% - 1px),#007BFF 1px);
+  background-size: 100% 100%
+}
+
+p span,
+a span {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  color: #0c0c0c
+}
+
+@media (min-width: 414px) {
+  p span,
+  a span {
+    display: inline-block;
+    padding-left: 0.025rem
+  }
 }
 
 .container {
   display: block;
-  padding-left: 10px;
-  padding-right: 10px;
   max-width: 1260px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   padding-bottom: 1rem;
-  padding-top: 1rem
+  padding-top: 1rem;
 }
 
 .site-header .container {
@@ -83,8 +192,44 @@ p {
   padding-bottom: 4rem
 }
 
+.site-header a {
+  display: block;
+  color: #0c0c0c;
+  font-size: 1.25rem
+}
+
+.site-header a:last-child {
+  margin-top: 2px
+}
+
 .ivory-is {
   padding-top: 2rem
+}
+
+.icons {
+  padding: 10px 0;
+}
+
+.icons a {
+  font-size: 24px;
+}
+
+.icons a:hover {
+  opacity: 0.5;
+  background-size: 0;
+}
+
+.folio__header {
+  font-size: 1.3rem;
+  line-height: 0;
+}
+
+
+.work header .see-project {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem
 }
 
 .device-frame {
@@ -102,12 +247,41 @@ p {
   display: flex
 }
 
+.device-frame header span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 3px
+}
+
 .device-frame_mobile {
   width: 100%;
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden
+}
+
+.learning-list {
+  padding-bottom: 5rem
+}
+
+.learning-list:last-child {
+  padding-bottom: 0
+}
+
+.dot {
+  display: block;
+  background-color: #007BFF;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%
+}
+
+.site-footer .dot {
+  margin: 0 auto
 }
 
 .site-nav .container {
@@ -123,7 +297,8 @@ p {
 }
 
 .site-nav .container a {
-  font-size: 1rem
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .site-nav .container a span {
@@ -131,6 +306,23 @@ p {
   padding-bottom: 0.5rem
 }
 
+@media (min-width: 768px) {
+  .ivory-is p {
+    width: 60%
+  }
+  .editorial-work small {
+    width: 40%
+  }
+  .about p {
+    width: 60%
+  }
+  .project-header p {
+    width: 60%
+  }
+  .project-header p span {
+    width: 50%
+  }
+}
 
 @media (min-width: 1200px) {
   .flex {
