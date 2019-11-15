@@ -47,15 +47,6 @@ h1 {
   color: var(--color-text);
 }
 
-@media only screen and (min-width: 768px) {
-
-  h1 {
-    font-size: 42px;
-    padding-bottom: 20px;
-  }
-
-}
-
 span.wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;
@@ -75,8 +66,6 @@ span.wave {
   100% { transform: rotate(  0.0deg) }
 }
 
-
-
 h2, h3 {
   font-family: 'Libre Baskerville', serif;
   font-weight: 400;
@@ -86,7 +75,6 @@ h2, h3 {
   line-height: 34px;
   color: var(--color-text);
 }
-
 
 h4,
 h5,
@@ -110,24 +98,8 @@ p {
   padding-bottom: .5rem
 }
 
-@media only screen and (min-width: 1024px) {
-
-  p { 
-    font-size: 1.5rem;
-  }
-}
-
-
 .ivory-is h2 {
   font-size: 1.4rem;
-}
-
-@media only screen and (min-width: 1024px) {
-
-  h2, .ivory-is h2, h3 {
-    font-size: 2rem;
-    line-height: 44px;
-  }
 }
 
 .ivory-is__name {
@@ -184,14 +156,6 @@ a span {
   font-size: 0.85rem;
   letter-spacing: 0.05rem;
   color: var(--color-text);
-}
-
-@media (min-width: 414px) {
-  p span,
-  a span {
-    display: inline-block;
-    padding-left: 0.025rem
-  }
 }
 
 .container {
@@ -313,16 +277,6 @@ html.transition *:after {
   line-height: 0;
 }
 
-@media only screen and (min-width: 1024px) {
-
-  .folio__header {
-    font-size: 2rem;
-    line-height: 0;
-    margin-bottom: 15px;
-  }
-}
-
-
 .work header .see-project {
   font-weight: 700;
   text-transform: uppercase;
@@ -415,30 +369,64 @@ html.transition *:after {
   color: var(--color-text);
 }
 
+@media (min-width: 414px) {
+  p span,
+  a span {
+    display: inline-block;
+    padding-left: 0.025rem
+  }
+}
+
 @media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+    padding-bottom: 20px;
+  }
+
   .ivory-is p {
     width: 60%
   }
+
   .editorial-work small {
     width: 40%
   }
+
   .about p {
     width: 60%
   }
+
   .project-header p {
     width: 60%
   }
+
   .project-header p span {
     width: 50%
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+
+  p { 
+    font-size: 1.5rem;
+  }
+
+  h2, .ivory-is h2, h3 {
+    font-size: 2rem;
+    line-height: 44px;
+  }
+
+  .folio__header {
+    font-size: 2rem;
+    line-height: 0;
+    margin-bottom: 15px;
+  }
+
   .flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start
   }
+
   .flex-4 .device-frame_mobile {
     width: calc(25% - 1rem);;
     flex-shrink: 0;
@@ -447,3 +435,4 @@ html.transition *:after {
     max-width: 100%
   }
 }
+
