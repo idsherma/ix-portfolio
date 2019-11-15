@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
@@ -22,6 +22,15 @@ html[data-theme='dark'] {
 	--color-text: #BBBBBB;
 }
 
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+	transition: all 750ms;
+	transition-delay: 0;
+}
+
+
 body {
   width: 100%;
   min-width: 320px;
@@ -31,13 +40,13 @@ body {
   background-color: var(--bg);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%
+  text-size-adjust: 100%;
 }
 
 img {
   display: block;
   width: 100%;
-  max-width: 100%
+  max-width: 100%;
 }
 
 h1 {
@@ -47,24 +56,6 @@ h1 {
   color: var(--color-text);
 }
 
-span.wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-  padding-left: 10px;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate(  0.0deg) }
-   10% { transform: rotate(-10.0deg) }
-   20% { transform: rotate( 12.0deg) }
-   30% { transform: rotate(-10.0deg) }
-   40% { transform: rotate(  9.0deg) }
-   50% { transform: rotate(  0.0deg) }
-  100% { transform: rotate(  0.0deg) }
-}
 
 h2, h3 {
   font-family: 'Libre Baskerville', serif;
@@ -86,7 +77,7 @@ h6 {
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.05rem
+  letter-spacing: 0.05rem;
 }
 
 p {
@@ -95,7 +86,7 @@ p {
   font-size: 1.25rem;
   line-height: 1.5;
   padding-top: .5rem;
-  padding-bottom: .5rem
+  padding-bottom: .5rem;
 }
 
 .ivory-is h2 {
@@ -112,7 +103,7 @@ small {
   font-size: 1rem;
   line-height: 1.5;
   padding-top: .5rem;
-  padding-bottom: .5rem
+  padding-bottom: .5rem;
 }
 
 label {
@@ -123,12 +114,12 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   color: #0c0c0c;
-  padding-bottom: 0.25rem
+  padding-bottom: 0.25rem;
 }
 
 label span {
   display: inline-block;
-  padding-right: 0.5rem
+  padding-right: 0.5rem;
 }
 
 a {
@@ -139,13 +130,13 @@ a {
   background-image: linear-gradient(transparent calc(100% - 1px), var(--color-headings) 1px);
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  transition: color 300ms, background-size 300ms
+  transition: color 300ms, background-size 300ms;
 }
 
 a:hover {
   color: var(--color-headings);
   background-image: linear-gradient(transparent calc(100% - 1px), var(--color-headings) 1px);
-  background-size: 100% 100%
+  background-size: 100% 100%;
 }
 
 p span,
@@ -172,6 +163,25 @@ a span {
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 1rem;
+}
+
+span.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg) }
+   10% { transform: rotate(-10.0deg) }
+   20% { transform: rotate( 12.0deg) }
+   30% { transform: rotate(-10.0deg) }
+   40% { transform: rotate(  9.0deg) }
+   50% { transform: rotate(  0.0deg) }
+  100% { transform: rotate(  0.0deg) }
 }
 
 input[type=checkbox] {
@@ -216,33 +226,25 @@ label:active:after {
 	width: 45px;
 }
 
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-	transition: all 750ms !important;
-	transition-delay: 0 !important;
-}
-
 .site-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 4rem
+  padding-bottom: 4rem;
 }
 
 .site-header a {
   display: block;
   color: #0c0c0c;
-  font-size: 1.25rem
+  font-size: 1.25rem;
 }
 
 .site-header a:last-child {
-  margin-top: 2px
+  margin-top: 2px;
 }
 
 .ivory-is {
-  padding-top: 2rem
+  padding-top: 2rem;
 }
 
 .icons {
@@ -281,7 +283,7 @@ html.transition *:after {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
-  letter-spacing: 0.05rem
+  letter-spacing: 0.05rem;
 }
 
 .device-frame {
@@ -289,14 +291,14 @@ html.transition *:after {
   border: 6px solid #eee;
   width: 100%;
   margin-bottom: 2rem;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .device-frame header {
   background-color: #ccc;
   padding: 5px 0 5px 2px;
   position: relative;
-  display: flex
+  display: flex;
 }
 
 .device-frame header span {
@@ -305,7 +307,7 @@ html.transition *:after {
   height: 5px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 0 3px
+  margin: 0 3px;
 }
 
 .device-frame_mobile {
@@ -313,15 +315,15 @@ html.transition *:after {
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .learning-list {
-  padding-bottom: 5rem
+  padding-bottom: 5rem;
 }
 
 .learning-list:last-child {
-  padding-bottom: 0
+  padding-bottom: 0;
 }
 
 .dot {
@@ -329,11 +331,11 @@ html.transition *:after {
   background: var(--color-headings);
   width: 12px;
   height: 12px;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .site-footer .dot {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .site-nav .container {
@@ -341,11 +343,11 @@ html.transition *:after {
   flex-direction: row;
   justify-content: space-between;
   padding-left: 1rem;
-  padding-right: 1rem
+  padding-right: 1rem;
 }
 
 .site-nav .container div:last-child {
-  text-align: right
+  text-align: right;
 }
 
 .site-nav .container a {
@@ -355,14 +357,19 @@ html.transition *:after {
 
 .site-nav .container a span {
   display: block;
-  padding-bottom: 0.5rem
+  padding-bottom: 0.5rem;
 }
 
 .wrp {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-header-home {
+  width: 100%;
 }
 
 .project-header p span {
@@ -373,7 +380,7 @@ html.transition *:after {
   p span,
   a span {
     display: inline-block;
-    padding-left: 0.025rem
+    padding-left: 0.025rem;
   }
 }
 
@@ -384,23 +391,23 @@ html.transition *:after {
   }
 
   .ivory-is p {
-    width: 60%
+    width: 60%;
   }
 
   .editorial-work small {
-    width: 40%
+    width: 40%;
   }
 
   .about p {
-    width: 60%
+    width: 60%;
   }
 
   .project-header p {
-    width: 60%
+    width: 60%;
   }
 
   .project-header p span {
-    width: 50%
+    width: 50%;
   }
 }
 
@@ -424,7 +431,7 @@ html.transition *:after {
   .flex {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start
+    align-items: flex-start;
   }
 
   .flex-4 .device-frame_mobile {
@@ -432,7 +439,7 @@ html.transition *:after {
     flex-shrink: 0;
     margin-left: 0;
     margin-right: 0;
-    max-width: 100%
+    max-width: 100%;
   }
 }
 
