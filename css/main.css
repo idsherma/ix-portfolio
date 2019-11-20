@@ -74,7 +74,6 @@ h6 {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5;
-  text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.05rem;
@@ -277,6 +276,16 @@ label:active:after {
 .folio__header {
   font-size: 1.3rem;
   line-height: 0;
+}
+
+.folio__header--project {
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
 }
 
 .work header .see-project {
