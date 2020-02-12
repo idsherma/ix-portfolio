@@ -450,5 +450,13 @@ label:active:after {
     margin-right: 0;
     max-width: 100%;
   }
+
+  .flex-2 .device-frame_mobile {
+    width: calc(50% - 1rem);;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
 }
 
